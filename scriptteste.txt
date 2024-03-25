@@ -1,0 +1,30 @@
+-- Henrique Scripts for Blox Fruits
+
+-- Ant ban, ant reset e ant afk
+local function setupAntiCheats()
+    -- Implement your anti-cheat logic here
+end
+
+-- Click NPCs to level up
+local function clickNPCs()
+    while true do
+        -- Implement your NPC clicking logic here
+        wait(0.1) -- Click every 0.1 seconds
+    end
+end
+
+-- Create the circular UI
+local function createCircularUI()
+    -- Implement your circular UI logic here
+    -- Show/hide the options when the circle is pressed
+end
+
+-- Main function
+local function main()
+    setupAntiCheats()
+    clickNPCs()
+    createCircularUI()
+end
+
+-- Execute the script
+main()
