@@ -1,0 +1,70 @@
+--Abaixo estará Lib da nossa Ui
+
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/7yhx/kwargs_Ui_Library/main/source.lua"))()
+
+local UI = Lib:Create{
+    Theme = "Dark", -- or any other theme
+    Size = UDim2.new(0, 555, 0, 400) -- default
+ }
+ 
+ local Main = UI:Tab{
+    Name = "inicio"
+ }
+ 
+ local Divider = Main:Divider{
+    Name = "inicio shit"
+ }
+ 
+ local QuitDivider = Main:Divider{
+    Name = "sair"
+ }
+
+ -- Henrique Scripts para Blox Fruits
+-- Versão: 1.0
+
+-- Configurações
+local config = {
+    farmLevel = true,   -- Farm de nível ativado
+    espFruit = true,    -- ESP para frutas ativado
+    espPlayer = true,   -- ESP para jogadores ativado
+    teleportToFruit = true, -- Teleportar para fruta ativado
+}
+
+-- Função para verificar se o jogador está AFK
+local function isAFK()
+    -- Implemente sua lógica de detecção de AFK aqui
+    -- Por exemplo, verifique se o jogador não moveu o mouse ou tocou na tela por um período de tempo
+    return false
+end
+
+-- Função principal
+local function main()
+    while true do
+        if not isAFK() then
+            if config.farmLevel then
+                -- Lógica para farm de nível
+                -- Implemente aqui o código para atacar inimigos e ganhar experiência
+            end
+
+            if config.espFruit then
+                -- Lógica para ESP de frutas
+                -- Implemente aqui o código para destacar as frutas próximas
+            end
+
+            if config.espPlayer then
+                -- Lógica para ESP de jogadores
+                -- Implemente aqui o código para destacar jogadores próximos
+            end
+
+            if config.teleportToFruit then
+                -- Lógica para teleportar para fruta
+                -- Implemente aqui o código para encontrar a fruta mais próxima e teleportar até ela
+            end
+        end
+
+        wait(1) -- Aguarda 1 segundo antes de verificar novamente
+    end
+end
+
+-- Início do script
+main()
